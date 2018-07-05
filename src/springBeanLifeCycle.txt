@@ -1,0 +1,22 @@
+BeanFactoryPostProcessor.construct
+[BeanFactoryPostProcessor].postProcessBeanFactory
+BeanPostProcessor.construct
+InstantiationAwareBeanPostProcessor.construct
+
+[InstantiationAwareBeanPostProcessor].postProcessBeforeInstantiation, beanClass: class com.czhhu.spring.pojo.Person, beanName: person
+person construct
+setAge: 12
+setName: dan
+[InstantiationAwareBeanPostProcessor].postProcessAfterInstantiation, bean: Person [name=dan, age=12], beanName: person
+[InstantiationAwareBeanPostProcessor].postProcessPropertyValues: PropertyValues: PropertyValues: length=0, PropertyDescriptor[]: [org.springframework.beans.GenericTypeAwarePropertyDescriptor[name=age], org.springframework.beans.GenericTypeAwarePropertyDescriptor[name=class], org.springframework.beans.GenericTypeAwarePropertyDescriptor[name=name]]
+[BeanNameAware].setBeanName: Person [name=dan, age=12]
+[BeanFactoryAware].setBeanFactory: Person [name=dan, age=12]
+[BeanPostProcessor].postProcessBeforeInitialization: Person [name=dan, age=12], person
+postConstruct
+[InitializingBean].afterPropertiesSet: Person [name=dan, age=12]
+init-method call
+[BeanPostProcessor].postProcessAfterInitialization: Person [name=dan, age=12], person
+
+preDestroy
+[DisposableBean].destroy: Person [name=dan, age=12]
+destroy-method call
